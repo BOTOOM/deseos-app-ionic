@@ -12,6 +12,6 @@ export class Lista {
         this.creadaEn = new Date();
         this.terminada = false;
         this.items = [];
-        this.id = new Date().getTime();
+        this.id =  Date.now() + Math.floor((Math.random() * 100) + 1);
     }
 }

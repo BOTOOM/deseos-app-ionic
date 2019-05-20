@@ -8,8 +8,10 @@ import { DeseosService } from '../../services/deseos.service';
 })
 export class Tab1Page {
 
-  constructor(private deseosService: DeseosService) {
+  listas = [];
 
+  constructor(private deseosService: DeseosService) {
+    this.listas = this.deseosService.listas;
   }
 
 }
