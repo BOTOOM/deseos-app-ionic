@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-agregar',
@@ -8,12 +7,8 @@ import { Router } from '@angular/router';
 })
 export class AgregarPage implements OnInit {
 
-  constructor(
-    private router: Router, ) { }
+  constructor( ) { }
 
-  volverTab1() {
-    this.router.navigateByUrl('/tabs/tab1');
-  }
 
   ngOnInit() {
   }
