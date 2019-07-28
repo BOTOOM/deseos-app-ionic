@@ -20,13 +20,21 @@ export class DeseosService {
     const NuevaLista = new Lista(titulo);
     this.listas.push( NuevaLista);
     this.guardarStorage();
+    return NuevaLista.id;
+  }
+
+  obtenerLista( id: string | number) {
+    id = Number(id);
+    return this.listas.find( listaData => {
+      return listaData.id === id;
+    } );
   }
 
   guardarStorage() {
     localStorage.setItem('data', JSON.stringify( this.listas ) );
   }
 
-  cargarStorage(){
+  cargarStorage() {
     if ( localStorage.getItem('data') ) {
     this.listas = JSON.parse( localStorage.getItem('data') ) ;
     } else {

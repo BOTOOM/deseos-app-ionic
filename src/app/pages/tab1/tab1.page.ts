@@ -47,7 +47,8 @@ export class Tab1Page {
               return;
             }
 
-            this.deseosService.creatLista(data.titulo);
+            const listaId =  this.deseosService.creatLista(data.titulo);
+            this.router.navigateByUrl(`/tabs/tab1/agregar/${listaId}`);
           }
         }
       ]
