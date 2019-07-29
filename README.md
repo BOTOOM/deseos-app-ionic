@@ -15,4 +15,4 @@ npm i angular-cli-ghpages --save-dev
 
 ng build --prod --base-href "https://botoom.github.io/deseos-app-ionic/"
 
-npx angular-cli-ghpages --dir=dist/spotiapp
+npx angular-cli-ghpages --dir=www
