@@ -14,15 +14,19 @@ export class ListasComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private deseosService: DeseosService,
+    public deseosService: DeseosService,
   ) {
-    this.listas = this.deseosService.listas;
+    // this.listas = this.deseosService.listas;
   }
 
   ngOnInit() {}
 
-  listaSelecionada(lista: Lista){
+  listaSelecionada(lista: Lista) {
     this.router.navigateByUrl(`${this.router.url}/agregar/${lista.id}`);
+  }
+
+  borrarLista(lista: Lista) {
+    this.deseosService.borrarLista(lista);
   }
 
 }
