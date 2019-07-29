@@ -11,13 +11,13 @@ import { Lista } from '../../models/lista.model';
 })
 export class Tab1Page {
 
-  listas = [];
+  // listas = [];
 
   constructor(
     private deseosService: DeseosService,
     private router: Router,
     private alertCtrl: AlertController) {
-    this.listas = this.deseosService.listas;
+    // this.listas = this.deseosService.listas;
   }
 
   async agregarLista() {
@@ -56,10 +56,6 @@ export class Tab1Page {
     });
 
     alert.present();
-  }
-
-  listaSelecionada(lista: Lista){
-    this.router.navigateByUrl(`/tabs/tab1/agregar/${lista.id}`);
   }
 
 }
